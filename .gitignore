@@ -15,8 +15,16 @@ venv/
 .env
 
 # Node.js
-node_modules/
+/node_modules/
 npm-debug.log
+
+# Production build
+/build
+
+# IDE files (if not using any specific IDE)
+.vscode/
+.idea/
+*.iml
 
 # macOS
 .DS_Store
