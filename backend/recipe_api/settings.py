@@ -30,19 +30,16 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.common.CommonMiddleware',
     'corsheaders.middleware.CorsMiddleware',
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Adjust to your frontend URL
-    "http://127.0.0.1:3000",   # Alternative if using 127.0.0.1
-    "http://localhost:8000",  # For development server
-    "http://127.0.0.1:8000",   # Alternative for development server
+    "http://localhost:3000",  # Frontend URL
 ]
 
 ROOT_URLCONF = 'recipe_api.urls'
@@ -73,7 +70,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'recipes_db',
-        'USER': 'postgres',
+        'USER': 'recipe_fetcher',
+        'PASSWORD': 'p_a1s2s3',
         'HOST': 'localhost',
         'PORT': '5432',
     }

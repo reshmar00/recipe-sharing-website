@@ -1,6 +1,7 @@
 // Recipes.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Recipes.css';  // Import the CSS file
 
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -8,7 +9,7 @@ const Recipes = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/api/recipes/')
       .then(response => {
-        setRecipes(response.data.recipes);
+        setRecipes(response.data);  // response.data is the array of recipes
       })
       .catch(error => {
         console.error('Error fetching recipes:', error);
@@ -16,20 +17,34 @@ const Recipes = () => {
   }, []);
 
   return (
-    <div>
+    <div className="recipes-container">
       <h2>Our Recipes</h2>
-      {recipes.map(recipe => (
-        <div key={recipe.id}>
-          <h3>{recipe.recipe_name}</h3>
-          <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
-          <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
-          <p><strong>Instructions:</strong> {recipe.instructions}</p>
-          <p><strong>Uploaded By:</strong> {recipe.uploaded_by}</p>
-          <p><strong>Last Modified:</strong> {recipe.date_last_modified}</p>
-        </div>
-      ))}
+      <table className="recipes-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Cuisine</th>
+            <th>Ingredients</th>
+            <th>Instructions</th>
+            <th>Uploaded By</th>
+            <th>Last Modified</th>
+          </tr>
+        </thead>
+        <tbody>
+          {recipes.map(recipe => (
+            <tr key={recipe.id}>
+              <td>{recipe.recipe_name}</td>
+              <td>{recipe.cuisine}</td>
+              <td>{recipe.ingredients}</td>
+              <td>{recipe.instructions}</td>
+              <td>{recipe.uploaded_by}</td>
+              <td>{recipe.date_last_modified}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
 
-export default Recipes;
+export default Recipes; 
