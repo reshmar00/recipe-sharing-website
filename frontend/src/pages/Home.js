@@ -1,12 +1,52 @@
-// Home.js
+// frontend/src/pages/Home.js
 import React from 'react';
+import { Container, Header, Segment } from 'semantic-ui-react';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel CSS
 
 const Home = () => {
   return (
-    <div>
-      <h1>Welcome to Recipe Sharing Website</h1>
+    <Container textAlign='center'>
+      <Header as='h1'>Welcome to Recipe Sharing Website</Header>
+      <Segment>
+        <Carousel autoPlay={true} interval={3000} stopOnHover={true} dynamicHeight={true}>
+          <div>
+            <img src='/images/image-1.jpg' alt='Good cooking' />
+            <p className="legend">Good cooking</p>
+          </div>
+          <div>
+            <img src='/images/image-2.jpg' alt='Good food' />
+            <p className="legend">Good food</p>
+          </div>
+          <div>
+            <img src='/images/image-3.jpg' alt='Good fun' />
+            <p className="legend">Good fun</p>
+          </div>
+          <div>
+            <img src='/images/image-4.jpg' alt='Share with friends' />
+            <p className="legend">Share with friends</p>
+          </div>
+          <div>
+            <img src='/images/image-5.jpg' alt='Spread the joy' />
+            <p className="legend">Spread the joy</p>
+          </div>
+          <div>
+            <img src='/images/image-6.jpg' alt='Mouth-watering recipes' />
+            <p className="legend">Mouth-watering recipes</p>
+          </div>
+          <div>
+            <img src='/images/image-7.jpg' alt='Find new favorites' />
+            <p className="legend">Find new favorites</p>
+          </div>
+          <div>
+            <img src='/images/image-8.jpg' alt='All right here' />
+            <p className="legend">All right here</p>
+          </div>
+        </Carousel>
+      </Segment>
       <p>Explore our collection of delicious recipes!</p>
-    </div>
+      <p>Share what you love, subscribe, and enjoy!</p>
+    </Container>
   );
 }
 
