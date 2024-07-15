@@ -1,0 +1,24 @@
+
+.recipes-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .recipes-table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 80%;
+  }
+  
+  .recipes-table th, .recipes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .recipes-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #f2f2f2;
+    color: black;
+  }  
