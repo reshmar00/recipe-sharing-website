@@ -1,11 +1,14 @@
-// Footer.js
+
 import React from 'react';
+import { Segment, Container } from 'semantic-ui-react';
 
 const Footer = () => {
   return (
-    <footer>
-      <p>&copy; 2024 Your Company</p>
-    </footer>
+    <Segment inverted color='red' textAlign='center' style={{ marginTop: '20px' }}>
+      <Container>
+        &copy; 2024 Recipe Sharing Website. All rights reserved.
+      </Container>
+    </Segment>
   );
 }
 

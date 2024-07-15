@@ -1,13 +1,13 @@
-// frontend/src/pages/Home.js
+
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import the carousel CSS
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const Home = () => {
   return (
     <Container textAlign='center'>
-      <Header as='h1'>Welcome to Recipe Sharing Website</Header>
+      <Header as='h1' style={{ color: 'white' }}>Welcome to Recipe Sharing Website</Header>
       <Segment>
         <Carousel autoPlay={true} interval={3000} stopOnHover={true} dynamicHeight={true}>
           <div>
@@ -40,7 +40,7 @@ const Home = () => {
           </div>
           <div>
             <img src='/images/image-8.jpg' alt='All right here' />
-            <p className="legend">All right here</p>
+            <p className="legend">All right</p>
           </div>
         </Carousel>
       </Segment>
