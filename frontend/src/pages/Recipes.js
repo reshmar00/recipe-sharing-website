@@ -1,6 +1,5 @@
 // Recipes.js
-
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const Recipes = () => {
@@ -9,45 +8,26 @@ const Recipes = () => {
   useEffect(() => {
     axios.get('http://localhost:8000/api/recipes/')
       .then(response => {
-        setRecipes(response.data);
+        setRecipes(response.data.recipes);
       })
       .catch(error => {
-        console.error('There was an error fetching the recipes!', error);
+        console.error('Error fetching recipes:', error);
       });
   }, []);
 
   return (
-    <div className="recipes-container">
+    <div>
       <h2>Our Recipes</h2>
-      <p>Explore our mouth-watering recipes.</p>
-      <table className="recipes-table">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Date Uploaded</th>
-            <th>Date Last Modified</th>
-            <th>Recipe Name</th>
-            <th>Cuisine</th>
-            <th>Ingredients</th>
-            <th>Instructions</th>
-            <th>Uploaded By</th>
-          </tr>
-        </thead>
-        <tbody>
-          {recipes.map((recipe) => (
-            <tr key={recipe.id}>
-              <td>{recipe.id}</td>
-              <td>{recipe.date_uploaded}</td>
-              <td>{recipe.date_last_modified}</td>
-              <td>{recipe.recipe_name}</td>
-              <td>{recipe.cuisine}</td>
-              <td>{recipe.ingredients}</td>
-              <td>{recipe.instructions}</td>
-              <td>{recipe.uploaded_by}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      {recipes.map(recipe => (
+        <div key={recipe.id}>
+          <h3>{recipe.recipe_name}</h3>
+          <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
+          <p><strong>Ingredients:</strong> {recipe.ingredients}</p>
+          <p><strong>Instructions:</strong> {recipe.instructions}</p>
+          <p><strong>Uploaded By:</strong> {recipe.uploaded_by}</p>
+          <p><strong>Last Modified:</strong> {recipe.date_last_modified}</p>
+        </div>
+      ))}
     </div>
   );
 }
