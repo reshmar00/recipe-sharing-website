@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
     path('api/recipes/', views.get_recipes, name='get_recipes'),
+    path('api/add/', views.add_recipe, name='add_recipe'),
 ]
