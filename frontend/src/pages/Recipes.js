@@ -17,7 +17,7 @@ const Recipes = () => {
   }, []);
 
   const fetchRecipes = () => {
-    axios.get('http://localhost:8000/api/recipes/')
+    axios.get('http://35.89.27.173:8000/api/recipes/')
       .then(response => {
         setRecipes(response.data);
       })
@@ -36,7 +36,7 @@ const Recipes = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8000/api/add/', newRecipe)
+    axios.post('http://35.89.27.173:8000/api/add/', newRecipe)
       .then(response => {
         fetchRecipes(); // Refresh recipes after adding a new one
         setShowForm(false); // Close the form after successful submission

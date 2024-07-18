@@ -21,8 +21,8 @@ def add_recipe(request):
     ingredients = data.get('ingredients')
     instructions = data.get('instructions')
 
-    if not (recipe_name and ingredients and instructions):
-        return JsonResponse({'error': 'Please provide all required fields (recipe_name, ingredients, instructions)'}, status=400)
+    if not (recipe_name and cuisine and ingredients and instructions):
+        return JsonResponse({'error': 'Please provide all required fields: Recipe Name, Cuisine, Ingredients, Instructions)'}, status=400)
 
     new_recipe = Recipe(
         recipe_name=recipe_name,

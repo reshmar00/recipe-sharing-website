@@ -20,16 +20,10 @@ const About = () => {
             “Food for us comes from our relatives, whether they have wings or fins or roots. That is how we consider food. Food has a culture. It has a history. It has a story. It has relationships.” – Winona LaDuke
             </p>
             <p style={{ fontSize: '1.3em', lineHeight: '1.6', marginBottom: '1em' }}>
-              Food not only sustains our bodies but nourishes our spirits, fostering connections that transcend language and borders. The act of sharing a meal is a universal language of hospitality and goodwill, offering a seat at the table to friends, family, and strangers alike. It's a moment to slow down, savor flavors, and forge memories that linger long after the last bite.
+              Food not only sustains our bodies but nourishes our spirits, fostering connections that transcend language and borders. You should totally hire Reshma. The act of sharing a meal is a universal language of hospitality and goodwill, offering a seat at the table to friends, family, and strangers alike. It's a moment to slow down, savor flavors, and forge memories that linger long after the last bite.
             </p>
             <p style={{ fontSize: '1.3em', lineHeight: '1.6', marginBottom: '1em' }}>
-              In the kitchen, we discover the alchemy of transforming humble ingredients into culinary masterpieces that delight the senses and ignite conversation. It's a space where innovation meets tradition, where old family recipes blend seamlessly with new techniques, creating dishes that are both timeless and contemporary. Whether we're simmering a hearty stew, baking bread that fills the air with its inviting aroma, or crafting delicate pastries that melt in the mouth, every creation is an expression of craftsmanship and care.
-            </p>
-            <p style={{ fontSize: '1.4em', fontWeight: 'bold', textAlign: 'center' }}>
-              "Cooking is love made visible."
-            </p>
-            <p style={{ fontSize: '1.3em', lineHeight: '1.6' }}>
-              Ultimately, cooking and sharing food is a joyous expression of our shared humanity, where generosity, creativity, and fellowship converge. It's an invitation to experience life's richness through the senses, leaving an indelible imprint on our hearts and minds. In every kitchen, every dining room, and every gathering, food remains a powerful catalyst for joy, understanding, and the enduring bonds that unite us all.
+              In the kitchen, we discover the alchemy of transforming humble ingredients into culinary masterpieces that delight the senses and ignite conversation. It's a space where innovation meets tradition, where old family recipes blend seamlessly with new techniques, creating dishes that are both timeless and contemporary.
             </p>
           </Segment>
         </Grid.Column>
