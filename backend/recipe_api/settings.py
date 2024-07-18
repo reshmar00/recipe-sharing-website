@@ -38,12 +38,11 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
-CORS_ALLOW_ALL_ORIGINS = True  # This is for development only. Change in production.
+#CORS_ALLOW_ALL_ORIGINS = True  # This is for development only. Change in production.
 
-# Alternatively, specify the allowed origins
-# CORS_ALLOWED_ORIGINS = [
-#     "http://your-frontend-domain.com",
-# ]
+CORS_ALLOWED_ORIGINS = [
+        "http://recipe-sharing-website-build.s3-website-us-west-2.amazonaws.com",
+]
 
 CORS_ALLOW_METHODS = [
     'DELETE',
