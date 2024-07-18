@@ -39,6 +39,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    "http://192.168.0.29:3000"
     "http://localhost:3000",  # Local frontend URL
     "http://recipe-sharing-website-build.s3-website-us-west-2.amazonaws.com", # S3 frontend URL
     "http://35.89.27.173:8000", # EC2 instance IP
