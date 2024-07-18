@@ -1,3 +1,17 @@
+####### View to display in backend #######
+#
+#from django.shortcuts import render
+#from .models import Recipe
+#import json
+#
+#def index(request):
+#    return JsonResponse({'message': 'Welcome to our Recipe Sharing Website!'})
+#
+#def recipe_list(request):
+#    recipes = Recipe.objects.all()
+#    return render(request, 'recipes/recipe_list.html', {'recipes': recipes})
+####### View to display in frontend #######
+
 from django.shortcuts import get_object_or_404, redirect
 from django.http import JsonResponse
 from .models import Recipe
