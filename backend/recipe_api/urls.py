@@ -1,6 +1,16 @@
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 from recipes import views
+
+######## For backend #########
+
+#urlpatterns = [
+#    path('admin/', admin.site.urls),
+#    path('', include('recipes.urls')),
+#]
+
+######## For frontend ##########
 
 urlpatterns = [
     path('admin/', admin.site.urls),
