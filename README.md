@@ -76,42 +76,43 @@ Ensure you have Node.js, npm, Python, and Django installed on your system. You c
   npm run build
   npm run start
   ```
-4. **Open your browser and navigate to:**
+
+5. **Open your browser and navigate to:**
   ```
   http://localhost:3000
   ```
 
 #### Setting Up the Backend
 
-5. **Navigate to the backend directory:**
+6. **Navigate to the backend directory:**
   ```
   cd backend
   ```
 
-6. **Create a virtual environment:**
+7. **Create a virtual environment:**
   ```
   python -m venv venv
   source venv/bin/activate
   ```
 
-7. **Install dependencies:**
+8. **Install dependencies:**
   ```
   pip install Django psycopg2-binary
   pip install django-cors-headers
   ```
 
-8. **Make migrations:**
+9. **Make migrations:**
   ```
   python manage.py makemigrations
   python manage.py migrate
   ```
 
-9. **Run the Django development server:**
+10. **Run the Django development server:**
   ```
   python manage.py runserver 0.0.0.0:8000
   ```
 
-10. **Open your browser and navigate to:**
+11. **Open your browser and navigate to:**
   ```
   http://127.0.0.1:8000
   ```
@@ -193,12 +194,8 @@ The backend is deployed on an AWS EC2 instance. Update the database details and 
 
 ### Environment Variables
 
-- Use .env files to manage sensitive information such as database credentials and secret keys.
+- Use `.env` files to manage sensitive information such as database credentials and secret keys.
 - Ensure to update these variables for both development and production environments.
-
-### Contributions
-
-Feel free to fork this repository and contribute to its development by submitting pull requests.
 
 ### Contact
 
