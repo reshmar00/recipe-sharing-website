@@ -38,6 +38,33 @@ MIDDLEWARE = [
     'django.middleware.common.CommonMiddleware',
 ]
 
+#CORS_ALLOW_ALL_ORIGINS = True  # This is for development only. Change in production.
+
+CORS_ALLOWED_ORIGINS = [
+        "http://recipe-sharing-website-build.s3-website-us-west-2.amazonaws.com",
+]
+
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
+
+CORS_ALLOW_HEADERS = [
+    'accept',
+    'accept-encoding',
+    'authorization',
+    'content-type',
+    'dnt',
+    'origin',
+    'user-agent',
+    'x-csrftoken',
+    'x-requested-with',
+]
+
 ROOT_URLCONF = 'recipe_api.urls'
 
 TEMPLATES = [
