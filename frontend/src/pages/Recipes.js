@@ -63,9 +63,9 @@ const Recipes = () => {
       
       {showForm && (
         <div className="add-recipe-form">
-          <h3>Add New Recipe</h3>
+          <h3 style={{ color: '#000'}} >Add New Recipe</h3>
           <form onSubmit={handleSubmit}>
-            <label htmlFor="recipe_name">Name:</label>
+            <label style={{ color: '#000'}} htmlFor="recipe_name">Name:</label>
             <input
               type="text"
               id="recipe_name"
@@ -74,7 +74,7 @@ const Recipes = () => {
               onChange={handleInputChange}
               required
             />
-            <label htmlFor="cuisine">Cuisine:</label>
+            <label style={{ color: '#000'}} htmlFor="cuisine">Cuisine:</label>
             <input
               type="text"
               id="cuisine"
@@ -82,7 +82,7 @@ const Recipes = () => {
               value={newRecipe.cuisine}
               onChange={handleInputChange}
             />
-            <label htmlFor="ingredients">Ingredients:</label>
+            <label style={{ color: '#000'}} htmlFor="ingredients">Ingredients:</label>
             <textarea
               id="ingredients"
               name="ingredients"
@@ -90,7 +90,7 @@ const Recipes = () => {
               onChange={handleInputChange}
               required
             />
-            <label htmlFor="instructions">Instructions:</label>
+            <label style={{ color: '#000'}} htmlFor="instructions">Instructions:</label>
             <textarea
               id="instructions"
               name="instructions"
