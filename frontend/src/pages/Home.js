@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Container, Header, Segment } from 'semantic-ui-react';
 import { Carousel } from 'react-responsive-carousel';
@@ -9,7 +8,7 @@ const Home = () => {
     <Container textAlign='center'>
       <Header as='h1' style={{ color: 'white' }}>Welcome to Recipe Sharing Website</Header>
       <Segment>
-        <Carousel autoPlay={true} interval={3000} stopOnHover={true} dynamicHeight={true}>
+        <Carousel autoPlay={true} interval={1500} stopOnHover={true} dynamicHeight={true}>
           <div>
             <img src='/images/image-1.jpg' alt='Good cooking' />
             <p className="legend">Good cooking</p>
@@ -40,7 +39,7 @@ const Home = () => {
           </div>
           <div>
             <img src='/images/image-8.jpg' alt='All right here' />
-            <p className="legend">All right</p>
+            <p className="legend">All right here</p>
           </div>
         </Carousel>
       </Segment>
